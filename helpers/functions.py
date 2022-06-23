@@ -23,10 +23,10 @@ def validate(formula):
 def printIfValid(valid, invalidIndex, output, formula):
     if not valid:
         insertInTextbox(output,
-                        f"Formula {formula} nu este validă, deoarece conține un caracter care nu "
+                        f"Formula {formula} nu respectă sintaxa, deoarece conține un caracter care nu "
                         f"face parte din alfabet pe poziția {invalidIndex}.")
         return
-    insertInTextbox(output, f"Formula {formula} este validă.\n")
+    insertInTextbox(output, f"Formula {formula} respectă sintaxa.\n")
 
 
 class Rule(Enum):

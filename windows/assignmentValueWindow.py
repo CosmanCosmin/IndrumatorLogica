@@ -29,7 +29,7 @@ def calculate(window, entry, output):
 
     varProps = dict.fromkeys(set(re.split("[^a-zA-Z]*", formula)), 0)
     varProps.pop('')
-    # ((a|b)&(c&d))
+
     functions.insertInTextbox(output, f'Introduceți valorile din atribuire (0 sau 1):\n')
     for index, key in enumerate(sorted(varProps.keys())):
         entry.delete('0', 'end')
@@ -50,16 +50,19 @@ def calculate(window, entry, output):
     mainButtons(window, entry, output)
     entry.delete('0', 'end')
     functions.insertInTextbox(output, f'Se calculează...\n')
-    functions.insertInTextbox(output, f'{formula}=')
+    functions.insertInTextbox(output, f'{formula}=τ({formula})=')
     initialFormula = formula
     for key in varProps.keys():
         formula = formula.replace(key, varProps[key])
+    formula = formula.replace('&', '*')
+    formula = formula.replace('|', '+')
+
     functions.insertInTextbox(output, f'{formula}=')
     while formula not in ['0', '1']:
         changed = False
         for i in ['0', '1']:
             for j in ['0', '1']:
-                for conn in ['&', '|']:
+                for conn in ['*', '+']:
                     if not changed:
                         newFormula = formula.replace(f'({i}{conn}{j})', compute(i, j, conn))
                         if newFormula != formula:
@@ -86,9 +89,9 @@ def calculate(window, entry, output):
 
 
 def compute(i, j, conn):
-    if conn == '&':
+    if conn == '*':
         return str(int(i) * int(j))
-    if conn == '|':
+    if conn == '+':
         return str(min(1, int(i) + int(j)))
 
 
