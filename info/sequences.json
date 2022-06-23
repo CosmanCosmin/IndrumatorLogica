@@ -1,0 +1,66 @@
+{
+  "sequences": [{
+    "formulaSet": ["(p&q)"],
+    "ending": "{(p&q)}⊢(p|q)"
+  }, {
+    "formulaSet": ["p", "q"],
+    "ending": "{p,q}⊢(p&q)"
+  }, {
+    "formulaSet": ["p"],
+    "ending": "{p}⊢p"
+  }, {
+    "formulaSet": ["(~p->q)", "~q", "~p"],
+    "ending": "{(~p->q),~q}⊢p"
+  }, {
+    "formulaSet": ["(p&q)"],
+    "ending": "{(p&q)}⊢p"
+  }, {
+    "formulaSet": ["p"],
+    "ending": "{(}⊢(p->p)"
+  }, {
+    "formulaSet": ["~(p|~p)", "p"],
+    "ending": "{}⊢(p|~p)"
+  }, {
+    "formulaSet": ["(p&q)"],
+    "ending": "{(p&q)}⊢q"
+  }, {
+    "formulaSet": ["p", "~p"],
+    "ending": "{p}⊢~~p"
+  }, {
+    "formulaSet": ["~(~p&~q)"],
+    "ending": "{~(~p&~q)}⊢(p|q)"
+  }, {
+    "formulaSet": ["(p&q)"],
+    "ending": "{(p&q)}⊢(p|q)"
+  }, {
+    "formulaSet": ["((p&q)->r)", "p", "q"],
+    "ending": "{((p&q)->r),p,q}⊢r"
+  }, {
+    "formulaSet": ["(p->q)", "p"],
+    "ending": "{(p->q),p}⊢q"
+  }, {
+    "formulaSet": ["~(~p|~q)"],
+    "ending": "{~(~p|~q)}⊢(p&q)"
+  }, {
+    "formulaSet": ["p", "q"],
+    "ending": "{q}⊢(p->q)"
+  }, {
+    "formulaSet": ["p"],
+    "ending": "{p}⊢(p|q)"
+  }, {
+    "formulaSet": ["p", "~p"],
+    "ending": "{p,a,b,c,d}⊢~~p"
+  }, {
+    "formulaSet": ["p", "~p"],
+    "ending": "{p,~p}⊢⊥"
+  }, {
+    "formulaSet": ["~(p&q)"],
+    "ending": "{~(p&q)}⊢(~p|~q)"
+  }, {
+    "formulaSet": ["p", "~p", "q"],
+    "ending": "{p,~p}⊢~q"
+  }, {
+    "formulaSet": ["(~~p->q)", "p"],
+    "ending": "{(~~p->q),p}⊢q"
+  }]
+}

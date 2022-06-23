@@ -1,0 +1,43 @@
+{
+  "questions": [{
+    "question": "O formulă ϕ se numește _____ dacă există o variabilă propozițională a ∈ A astfel încât ϕ = a sau ϕ = ¬a.",
+    "answers": ["congruență", "clauză", "literal", "validă"],
+    "correct": "literal"
+  }, {
+    "question": "O formulă este în _____ dacă este o disjuncție de conjuncții.",
+    "answers": ["FNBC", "FND", "FNC", "echilibru"],
+    "correct": "FND"
+  }, {
+    "question": "O formulă ϕ se numește _____ dacă există n literali ϕ1, ..., ϕn a.î. ϕ = ϕ1 ∨ ϕ2 ∨ ... ∨ ϕn.",
+    "answers": ["literal", "clauză", "validă", "satisfiabilă"],
+    "correct": "clauză"
+  }, {
+    "question": "Ce indică simbolul '≡'?",
+    "answers": ["o congruență", "o egalitate", "o echivalență", "o deducție logică"],
+    "correct": "o echivalență"
+  }, {
+    "question": "Cum mai este numită regula de eliminare a implicației?",
+    "answers": ["lex consequentia", "lex ponens", "modus ponens", "modus tollens"],
+    "correct": "modus ponens"
+  }, {
+    "question": "Ce regulă mai este numită \"modus tollens\"?",
+    "answers": ["regula de extindere", "regula de absorbție", "regula \"ipoteză\"", "eliminarea implicației"],
+    "correct": "regula de absorbție"
+  }, {
+    "question": "Care din următoarele variante este o propoziție?",
+    "answers": ["Plouă.", "Plouă!", "Această afirmație este falsă.", "Plouă?"],
+    "correct": "Plouă."
+  }, {
+    "question": "Disjuncțiile sunt propoziții legate între ele prin \"___\".",
+    "answers": ["sau", "virgulă", "și", "dacă și numai dacă"],
+    "correct": "sau"
+  }, {
+    "question": "O formulă ϕ este ___ dacă orice atribuire τ are proprietatea că τ |= ϕ (orice atribuire este model pentru formulă).",
+    "answers": ["echivalentă", "o consecință semantică", "satisfiabilă", "validă"],
+    "correct": "validă"
+  }, {
+    "question": "O formulă care constă doar dintr-o variabilă propozițională (cum ar fi formulele p sau q) se numește formulă ___.",
+    "answers": ["moleculară", "atomică", "validă", "compusă"],
+    "correct": "atomică"
+  }]
+}
